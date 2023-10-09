@@ -2,26 +2,30 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
-  }
-}
-
 body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+  @apply bg-black text-white overflow-x-hidden;
+}
+
+.container {
+  @apply mx-auto w-[93%] md:w-[90%];
+}
+
+.btn {
+  @apply bg-primary hover:brightness-90 py-2 px-3 md:py-2 md:px-4 text-sm transition;
+}
+
+a {
+  @apply hover:text-primary transition;
+}
+
+.section-title {
+  @apply text-2xl font-semibold text-center mb-10 pt-16;
+}
+
+.card-container:hover p {
+  @apply text-primary transition ease-in-out duration-200;
+}
+
+.card-container:hover h3 {
+  @apply text-primary transition ease-in-out duration-200;
 }
