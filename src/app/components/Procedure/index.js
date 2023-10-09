@@ -12,7 +12,7 @@ function Procedure() {
           <Image src={Chat} className="max-w-[160px] md:max-w-[250px]" />
           <div>
             <span className="font-semibold mb-2 block pt-4">Estimate</span>
-            <p>
+            <p className="text-sm md:text-base">
               Estimate the cost of creating your application with us. Pricing is
               transparent at the start with a gradual payment method.
             </p>
